@@ -12,6 +12,7 @@
 		4F56096E208443E70078DCFB /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56096D208443E70078DCFB /* BaseNavigationController.swift */; };
 		4F560973208443E80078DCFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F560972208443E80078DCFB /* Assets.xcassets */; };
 		4F560976208443E80078DCFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F560974208443E80078DCFB /* LaunchScreen.storyboard */; };
+		4FACBC96208998C10050DB58 /* PolyLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FACBC95208998C10050DB58 /* PolyLineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4F560972208443E80078DCFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F560975208443E80078DCFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F560977208443E80078DCFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FACBC95208998C10050DB58 /* PolyLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolyLineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		4F56096A208443E70078DCFB /* stockCharts */ = {
 			isa = PBXGroup;
 			children = (
+				4FACBC94208998860050DB58 /* ListCharts */,
 				4F56096B208443E70078DCFB /* AppDelegate.swift */,
 				4F56096D208443E70078DCFB /* BaseNavigationController.swift */,
 				4F3ED5FD208582C200C409EB /* ListViewController.swift */,
@@ -62,6 +65,14 @@
 				4F560977208443E80078DCFB /* Info.plist */,
 			);
 			path = stockCharts;
+			sourceTree = "<group>";
+		};
+		4FACBC94208998860050DB58 /* ListCharts */ = {
+			isa = PBXGroup;
+			children = (
+				4FACBC95208998C10050DB58 /* PolyLineViewController.swift */,
+			);
+			path = ListCharts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +147,7 @@
 			files = (
 				4F56096E208443E70078DCFB /* BaseNavigationController.swift in Sources */,
 				4F56096C208443E70078DCFB /* AppDelegate.swift in Sources */,
+				4FACBC96208998C10050DB58 /* PolyLineViewController.swift in Sources */,
 				4F3ED5FE208582C200C409EB /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
