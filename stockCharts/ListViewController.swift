@@ -23,11 +23,11 @@ class ListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Demo"
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        self.tableView.cellLayoutMarginsFollowReadableWidth = false
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: kTableCellIdentifer)
+        navigationItem.title = "Demo"
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.cellLayoutMarginsFollowReadableWidth = false
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: kTableCellIdentifer)
     }
 }
 
@@ -41,7 +41,7 @@ extension ListViewController {
         if let aClass: UIViewController.Type = NSClassFromString(displayName + "." + chart.viewController) as? UIViewController.Type {
             let viewController = aClass.init()
             viewController.navigationItem.title = chart.title
-            self.navigationController?.pushViewController(viewController, animated: true)
+            navigationController?.pushViewController(viewController, animated: true)
         }
     }
     

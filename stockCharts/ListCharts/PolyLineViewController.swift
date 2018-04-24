@@ -9,10 +9,30 @@
 import UIKit
 
 class PolyLineViewController: UIViewController {
+    
+    lazy var lineView: PolyLineView = {
+        
+        let chart = PolyLineView()
+        view.addSubview(chart)
+        
+        // layout
+        chart.translatesAutoresizingMaskIntoConstraints = false
+        let margins = view.layoutMarginsGuide
+        NSLayoutConstraint.activate([
+            chart.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
+            chart.centerYAnchor.constraint(equalTo: margins.centerYAnchor),
+            chart.widthAnchor.constraint(equalTo: margins.widthAnchor),
+            chart.heightAnchor.constraint(equalToConstant: 200)
+            ])
 
+        return chart
+    }()
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white
-        // Do any additional setup after loading the view.
+        view.backgroundColor = UIColor.white
+        
+        lineView.stockFill()
     }
 }
