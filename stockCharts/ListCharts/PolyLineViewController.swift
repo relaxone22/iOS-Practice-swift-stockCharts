@@ -10,29 +10,41 @@ import UIKit
 
 class PolyLineViewController: UIViewController {
     
-    lazy var lineView: PolyLineView = {
-        
-        let chart = PolyLineView()
-        view.addSubview(chart)
-        
-        // layout
-        chart.translatesAutoresizingMaskIntoConstraints = false
-        let margins = view.layoutMarginsGuide
-        NSLayoutConstraint.activate([
-            chart.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
-            chart.centerYAnchor.constraint(equalTo: margins.centerYAnchor),
-            chart.widthAnchor.constraint(equalTo: margins.widthAnchor),
-            chart.heightAnchor.constraint(equalToConstant: 200)
-            ])
-
-        return chart
-    }()
+    var chart: PolyLineView?
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.gray
+        self.createPolyLineView()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        chart?.stockFill()
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        self.createPolyLineView()
+    }
+    
+    func createPolyLineView() {
         
-        lineView.stockFill()
+        chart?.removeFromSuperview()
+        
+        let lineView = PolyLineView()
+        view.addSubview(lineView)
+        
+        lineView.translatesAutoresizingMaskIntoConstraints = false
+        let margins = view.layoutMarginsGuide
+        NSLayoutConstraint.activate([
+            lineView.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
+            lineView.centerYAnchor.constraint(equalTo: margins.centerYAnchor),
+            lineView.widthAnchor.constraint(equalTo: margins.widthAnchor),
+            lineView.heightAnchor.constraint(equalToConstant: 200)
+            ])
+        
+        chart = lineView
+        
     }
 }

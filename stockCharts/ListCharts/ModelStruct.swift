@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// 點的基本模型
 struct PointModel {
     var xPosition: CGFloat
     var yPosition: CGFloat
@@ -42,7 +43,7 @@ struct ChartModel {
         scaleY = 0
         scaleX = 0
         
-        lineWidth = 1
+        lineWidth = 2
         lineSpace = 0
         
         leftMargin = 0
@@ -50,6 +51,6 @@ struct ChartModel {
         topMargin = 0
         bottomMargin = 0
 
-        lineColor = UIColor.green
+        lineColor = UIColor.yellow
     }
 }
