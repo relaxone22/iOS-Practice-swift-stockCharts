@@ -1,18 +1,19 @@
 //
-//  PolyLineView.swift
+//  SlipPolyLineView.swift
 //  stockCharts
 //
-//  Created by tonyliu on 2018/4/24.
+//  Created by tonyliu on 2018/4/26.
 //  Copyright © 2018 mitake. All rights reserved.
 //
 
 import UIKit
 
-// MARK: 客製化視圖
-class PolyLineView: UIView {
+class SlipPolyLineView: UIView {
+// MARK: property
+    fileprivate var viewModel = SlipPolyLineModel()
+    lazy var superScrollView: UIScrollView? = self.superview as? UIScrollView
     
-    fileprivate var viewModel = PolyLineModel()
-    
+// MARK: initialize
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -22,21 +23,25 @@ class PolyLineView: UIView {
         backgroundColor = UIColor.black
     }
     
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        self.drawLineLayer()
-    }
-    
-// MARK: 畫圖開放的方法
-    
+// MARK: internal method
     /// 開始畫圖
     func stockFill() {
-        viewModel.config(size: bounds.size)
-        setNeedsDisplay()
+        viewModel.config(size: superScrollView!.bounds.size)
+        configContentWidth()
+        drawLineLayer()
+    }
+    
+// MARK: fileprivate method
+    fileprivate func configContentWidth() {
+        let model = viewModel.chartModel
+        let contentWidth = model.lineSpace * CGFloat(viewModel.datas.count - 1) + model.leftMargin + model.rightMargin
+        let contenrHeight = superScrollView!.bounds.height
+        frame = CGRect(x: 0, y: 0, width: contentWidth, height: contenrHeight)
+        superScrollView?.contentSize = CGSize(width: contentWidth, height: 0)
     }
     
     /// 畫曲線圖
-    func drawLineLayer() {
+    fileprivate func drawLineLayer() {
         // 畫圖
         let path = UIBezierPath.drawLine(points: viewModel.points)
         
@@ -52,18 +57,6 @@ class PolyLineView: UIView {
         polyLineLayer.contentsScale = UIScreen.main.scale
         layer.addSublayer(polyLineLayer)
         
-        if viewModel.isFillColor, let lastPoint = viewModel.points.last {
-            
-            let yPosition = bounds.size.height - chartModel.topMargin
-            path.addLine(to: CGPoint(x: lastPoint.xPosition, y: yPosition))
-            path.addLine(to: CGPoint(x: chartModel.leftMargin, y: yPosition))
-            path.lineWidth = 0
-            viewModel.fillColor.setFill()
-            path.fill()
-            path.stroke()
-            path.close()
-        }
-        
         // 動畫
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.duration = 2
@@ -74,21 +67,27 @@ class PolyLineView: UIView {
     }
 }
 
-// MARK: 折線圖資料模型
-fileprivate struct PolyLineModel {
-    let datas: [Int] = [12, 33, 26, 10, 7, 30, 21]
-    let fillColor: UIColor = UIColor.blue
-    let isFillColor: Bool = true
+// MARK: 資料模型
+fileprivate struct SlipPolyLineModel {
+    let datas: [Int] = [12,33,44,55,7,10,28,12,33,11,63,7,10,66,12,41,28,12,55,77,21,12,33,54,30,7,20,21,12,33,44,55,7,10,28,12,33,11,63,7,10,66,12,41,28,12,55,77,21,12,33]
     
-    var chartModel: ChartModel = ChartModel()
+    var chartModel: ChartModel = {
+        var model = ChartModel()
+        model.leftMargin = 10
+        model.rightMargin = 10
+        model.topMargin = 10
+        model.bottomMargin = 10
+        return model
+    }()
     var points: [PointModel] = []
     
     mutating func config(size: CGSize) {
         
         let height = size.height
         let width = size.width
+        let pointWidth = CGFloat(10)
         
-        chartModel.lineSpace = (width - chartModel.leftMargin - chartModel.rightMargin) / CGFloat(datas.count - 1)
+        chartModel.lineSpace = width / pointWidth
         
         chartModel.maxY = CGFloat(datas.max()!)
         chartModel.minY = CGFloat(datas.min()!)

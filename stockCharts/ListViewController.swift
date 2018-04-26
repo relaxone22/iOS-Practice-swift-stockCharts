@@ -11,7 +11,7 @@ import UIKit
 // MARK: 資料結構
 struct chartList {
     static let charts:[(title: String, viewController: String)] = [("折線圖","PolyLineViewController"),
-                                                                   ("滑動折線圖",""),
+                                                                   ("滑動折線圖","SlipPolyLineViewController"),
                                                                    ("k線圖",""),
                                                                    ("分時圖","")]
 }
@@ -41,6 +41,7 @@ extension ListViewController {
         if let aClass: UIViewController.Type = NSClassFromString(displayName + "." + chart.viewController) as? UIViewController.Type {
             let viewController = aClass.init()
             viewController.navigationItem.title = chart.title
+            viewController.view.backgroundColor = UIColor.gray
             navigationController?.pushViewController(viewController, animated: true)
         }
     }

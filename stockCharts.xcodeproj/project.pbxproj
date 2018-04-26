@@ -14,6 +14,9 @@
 		4F560976208443E80078DCFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F560974208443E80078DCFB /* LaunchScreen.storyboard */; };
 		4F7B2AE9208ED2FC00CAE85B /* PolyLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7B2AE8208ED2FC00CAE85B /* PolyLineView.swift */; };
 		4F7B2AEB208EDFBD00CAE85B /* ModelStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7B2AEA208EDFBD00CAE85B /* ModelStruct.swift */; };
+		4F95E3E420915F2E00314391 /* UIBezierPath+DrawLinePoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F95E3E320915F2E00314391 /* UIBezierPath+DrawLinePoints.swift */; };
+		4F95E3E620915F9200314391 /* SlipPolyLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F95E3E520915F9200314391 /* SlipPolyLineViewController.swift */; };
+		4F95E3E82091604500314391 /* SlipPolyLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F95E3E72091604500314391 /* SlipPolyLineView.swift */; };
 		4FACBC96208998C10050DB58 /* PolyLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FACBC95208998C10050DB58 /* PolyLineViewController.swift */; };
 		4FB665742090340E00978EE8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4FB665732090340E00978EE8 /* README.md */; };
 		4FB6657B2090390200978EE8 /* polyLineChart.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4FB6657A2090390200978EE8 /* polyLineChart.gif */; };
@@ -29,6 +32,9 @@
 		4F560977208443E80078DCFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F7B2AE8208ED2FC00CAE85B /* PolyLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolyLineView.swift; sourceTree = "<group>"; };
 		4F7B2AEA208EDFBD00CAE85B /* ModelStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelStruct.swift; sourceTree = "<group>"; };
+		4F95E3E320915F2E00314391 /* UIBezierPath+DrawLinePoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+DrawLinePoints.swift"; sourceTree = "<group>"; };
+		4F95E3E520915F9200314391 /* SlipPolyLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipPolyLineViewController.swift; sourceTree = "<group>"; };
+		4F95E3E72091604500314391 /* SlipPolyLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipPolyLineView.swift; sourceTree = "<group>"; };
 		4FACBC95208998C10050DB58 /* PolyLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolyLineViewController.swift; sourceTree = "<group>"; };
 		4FB665732090340E00978EE8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4FB6657A2090390200978EE8 /* polyLineChart.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = polyLineChart.gif; sourceTree = "<group>"; };
@@ -80,9 +86,12 @@
 		4FACBC94208998860050DB58 /* ListCharts */ = {
 			isa = PBXGroup;
 			children = (
+				4F7B2AEA208EDFBD00CAE85B /* ModelStruct.swift */,
+				4F95E3E320915F2E00314391 /* UIBezierPath+DrawLinePoints.swift */,
 				4FACBC95208998C10050DB58 /* PolyLineViewController.swift */,
 				4F7B2AE8208ED2FC00CAE85B /* PolyLineView.swift */,
-				4F7B2AEA208EDFBD00CAE85B /* ModelStruct.swift */,
+				4F95E3E520915F9200314391 /* SlipPolyLineViewController.swift */,
+				4F95E3E72091604500314391 /* SlipPolyLineView.swift */,
 			);
 			path = ListCharts;
 			sourceTree = "<group>";
@@ -171,7 +180,10 @@
 				4F56096C208443E70078DCFB /* AppDelegate.swift in Sources */,
 				4FACBC96208998C10050DB58 /* PolyLineViewController.swift in Sources */,
 				4F7B2AEB208EDFBD00CAE85B /* ModelStruct.swift in Sources */,
+				4F95E3E620915F9200314391 /* SlipPolyLineViewController.swift in Sources */,
 				4F3ED5FE208582C200C409EB /* ListViewController.swift in Sources */,
+				4F95E3E420915F2E00314391 /* UIBezierPath+DrawLinePoints.swift in Sources */,
+				4F95E3E82091604500314391 /* SlipPolyLineView.swift in Sources */,
 				4F7B2AE9208ED2FC00CAE85B /* PolyLineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

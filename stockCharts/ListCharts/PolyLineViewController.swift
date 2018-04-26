@@ -13,10 +13,8 @@ class PolyLineViewController: UIViewController {
     var chart: PolyLineView?
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        view.backgroundColor = UIColor.gray
-        self.createPolyLineView()
+        createPolyLineView()
     }
     
     override func viewDidLayoutSubviews() {
@@ -25,7 +23,7 @@ class PolyLineViewController: UIViewController {
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        self.createPolyLineView()
+        createPolyLineView()
     }
     
     func createPolyLineView() {

@@ -15,7 +15,7 @@ struct PointModel {
     var lineColor: UIColor
 }
 
-/// 線圖基本模型
+/// 基本線圖模型
 struct ChartModel {
     
     var maxY,
