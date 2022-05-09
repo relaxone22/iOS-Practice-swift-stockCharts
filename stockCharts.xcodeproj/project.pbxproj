@@ -20,6 +20,9 @@
 		4FACBC96208998C10050DB58 /* PolyLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FACBC95208998C10050DB58 /* PolyLineViewController.swift */; };
 		4FB665742090340E00978EE8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4FB665732090340E00978EE8 /* README.md */; };
 		4FB6657B2090390200978EE8 /* polyLineChart.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4FB6657A2090390200978EE8 /* polyLineChart.gif */; };
+		C283C5FA282934E9000881C5 /* CandleChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283C5F9282934E9000881C5 /* CandleChartViewController.swift */; };
+		C283C5FF2829385A000881C5 /* CandleDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283C5FE2829385A000881C5 /* CandleDataService.swift */; };
+		C283C60028293FFA000881C5 /* CandleData.json in Resources */ = {isa = PBXBuildFile; fileRef = C283C5FD28293814000881C5 /* CandleData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		4FACBC95208998C10050DB58 /* PolyLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolyLineViewController.swift; sourceTree = "<group>"; };
 		4FB665732090340E00978EE8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4FB6657A2090390200978EE8 /* polyLineChart.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = polyLineChart.gif; sourceTree = "<group>"; };
+		C283C5F9282934E9000881C5 /* CandleChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleChartViewController.swift; sourceTree = "<group>"; };
+		C283C5FD28293814000881C5 /* CandleData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CandleData.json; sourceTree = "<group>"; };
+		C283C5FE2829385A000881C5 /* CandleDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,7 @@
 		4F56096A208443E70078DCFB /* stockCharts */ = {
 			isa = PBXGroup;
 			children = (
+				C283C5F828293495000881C5 /* CandleChart */,
 				4FB665792090390100978EE8 /* Resource */,
 				4FACBC94208998860050DB58 /* ListCharts */,
 				4F56096B208443E70078DCFB /* AppDelegate.swift */,
@@ -102,6 +109,16 @@
 				4FB6657A2090390200978EE8 /* polyLineChart.gif */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		C283C5F828293495000881C5 /* CandleChart */ = {
+			isa = PBXGroup;
+			children = (
+				C283C5F9282934E9000881C5 /* CandleChartViewController.swift */,
+				C283C5FD28293814000881C5 /* CandleData.json */,
+				C283C5FE2829385A000881C5 /* CandleDataService.swift */,
+			);
+			path = CandleChart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +183,7 @@
 				4F560976208443E80078DCFB /* LaunchScreen.storyboard in Resources */,
 				4F560973208443E80078DCFB /* Assets.xcassets in Resources */,
 				4FB6657B2090390200978EE8 /* polyLineChart.gif in Resources */,
+				C283C60028293FFA000881C5 /* CandleData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,11 +196,13 @@
 			files = (
 				4F56096E208443E70078DCFB /* BaseNavigationController.swift in Sources */,
 				4F56096C208443E70078DCFB /* AppDelegate.swift in Sources */,
+				C283C5FA282934E9000881C5 /* CandleChartViewController.swift in Sources */,
 				4FACBC96208998C10050DB58 /* PolyLineViewController.swift in Sources */,
 				4F7B2AEB208EDFBD00CAE85B /* ModelStruct.swift in Sources */,
 				4F95E3E620915F9200314391 /* SlipPolyLineViewController.swift in Sources */,
 				4F3ED5FE208582C200C409EB /* ListViewController.swift in Sources */,
 				4F95E3E420915F2E00314391 /* UIBezierPath+DrawLinePoints.swift in Sources */,
+				C283C5FF2829385A000881C5 /* CandleDataService.swift in Sources */,
 				4F95E3E82091604500314391 /* SlipPolyLineView.swift in Sources */,
 				4F7B2AE9208ED2FC00CAE85B /* PolyLineView.swift in Sources */,
 			);

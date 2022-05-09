@@ -12,7 +12,7 @@ import UIKit
 struct chartList {
     static let charts:[(title: String, viewController: String)] = [("折線圖","PolyLineViewController"),
                                                                    ("滑動折線圖","SlipPolyLineViewController"),
-                                                                   ("k線圖",""),
+                                                                   ("k線圖","CandleChartViewController"),
                                                                    ("分時圖","")]
 }
 
