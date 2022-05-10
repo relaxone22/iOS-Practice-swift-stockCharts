@@ -33,7 +33,7 @@ class CandleDataService {
     
     func loadData() {
         readFile()
-        print(list)
+//        print(list)
     }
     
     private func readFile() {

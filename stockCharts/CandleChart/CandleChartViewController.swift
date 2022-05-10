@@ -7,13 +7,34 @@
 //
 
 import UIKit
+import SnapKit
 
 class CandleChartViewController: UIViewController {
-
+    
+    lazy var candleView:ShortCandleChartView = {
+        let view = ShortCandleChartView()
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        layout()
         CandleDataService.shared.loadData()
+        
+        if let ticks = CandleDataService.shared.list?.tick {
+            candleView.loadData(ticks: ticks)
+        }
+        
+    }
+    
+    private func layout() {
+        view.addSubview(candleView)
+        candleView.snp.makeConstraints { make in
+            
+            make.top.left.right.equalToSuperview().inset(5)
+            make.bottom.equalToSuperview().inset(30)
+        }
+        
     }
 
 }

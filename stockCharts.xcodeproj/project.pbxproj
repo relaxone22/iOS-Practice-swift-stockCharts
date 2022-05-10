@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,9 +20,13 @@
 		4FACBC96208998C10050DB58 /* PolyLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FACBC95208998C10050DB58 /* PolyLineViewController.swift */; };
 		4FB665742090340E00978EE8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4FB665732090340E00978EE8 /* README.md */; };
 		4FB6657B2090390200978EE8 /* polyLineChart.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4FB6657A2090390200978EE8 /* polyLineChart.gif */; };
+		C272EA09282A59E4002F0ABF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C272EA08282A59E4002F0ABF /* SnapKit */; };
 		C283C5FA282934E9000881C5 /* CandleChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283C5F9282934E9000881C5 /* CandleChartViewController.swift */; };
 		C283C5FF2829385A000881C5 /* CandleDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283C5FE2829385A000881C5 /* CandleDataService.swift */; };
 		C283C60028293FFA000881C5 /* CandleData.json in Resources */ = {isa = PBXBuildFile; fileRef = C283C5FD28293814000881C5 /* CandleData.json */; };
+		C2DBDFA4282A5CAB0086FE09 /* ShortCandleChartSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBDFA3282A5CAB0086FE09 /* ShortCandleChartSubView.swift */; };
+		C2DBDFA6282A5CFE0086FE09 /* ShortCandleChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBDFA5282A5CFE0086FE09 /* ShortCandleChartView.swift */; };
+		C2DBDFAD282A7ED40086FE09 /* ShortCandleChartSubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBDFAC282A7ED40086FE09 /* ShortCandleChartSubViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,9 @@
 		C283C5F9282934E9000881C5 /* CandleChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleChartViewController.swift; sourceTree = "<group>"; };
 		C283C5FD28293814000881C5 /* CandleData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CandleData.json; sourceTree = "<group>"; };
 		C283C5FE2829385A000881C5 /* CandleDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleDataService.swift; sourceTree = "<group>"; };
+		C2DBDFA3282A5CAB0086FE09 /* ShortCandleChartSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCandleChartSubView.swift; sourceTree = "<group>"; };
+		C2DBDFA5282A5CFE0086FE09 /* ShortCandleChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCandleChartView.swift; sourceTree = "<group>"; };
+		C2DBDFAC282A7ED40086FE09 /* ShortCandleChartSubViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCandleChartSubViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C272EA09282A59E4002F0ABF /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,9 +122,12 @@
 		C283C5F828293495000881C5 /* CandleChart */ = {
 			isa = PBXGroup;
 			children = (
-				C283C5F9282934E9000881C5 /* CandleChartViewController.swift */,
 				C283C5FD28293814000881C5 /* CandleData.json */,
 				C283C5FE2829385A000881C5 /* CandleDataService.swift */,
+				C283C5F9282934E9000881C5 /* CandleChartViewController.swift */,
+				C2DBDFA3282A5CAB0086FE09 /* ShortCandleChartSubView.swift */,
+				C2DBDFAC282A7ED40086FE09 /* ShortCandleChartSubViewModel.swift */,
+				C2DBDFA5282A5CFE0086FE09 /* ShortCandleChartView.swift */,
 			);
 			path = CandleChart;
 			sourceTree = "<group>";
@@ -137,6 +148,9 @@
 			dependencies = (
 			);
 			name = stockCharts;
+			packageProductDependencies = (
+				C272EA08282A59E4002F0ABF /* SnapKit */,
+			);
 			productName = stockCharts;
 			productReference = 4F560968208443E70078DCFB /* stockCharts.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +179,9 @@
 				Base,
 			);
 			mainGroup = 4F56095F208443E70078DCFB;
+			packageReferences = (
+				C272EA07282A59E4002F0ABF /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 4F560969208443E70078DCFB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -196,10 +213,13 @@
 			files = (
 				4F56096E208443E70078DCFB /* BaseNavigationController.swift in Sources */,
 				4F56096C208443E70078DCFB /* AppDelegate.swift in Sources */,
+				C2DBDFA4282A5CAB0086FE09 /* ShortCandleChartSubView.swift in Sources */,
 				C283C5FA282934E9000881C5 /* CandleChartViewController.swift in Sources */,
 				4FACBC96208998C10050DB58 /* PolyLineViewController.swift in Sources */,
 				4F7B2AEB208EDFBD00CAE85B /* ModelStruct.swift in Sources */,
+				C2DBDFA6282A5CFE0086FE09 /* ShortCandleChartView.swift in Sources */,
 				4F95E3E620915F9200314391 /* SlipPolyLineViewController.swift in Sources */,
+				C2DBDFAD282A7ED40086FE09 /* ShortCandleChartSubViewModel.swift in Sources */,
 				4F3ED5FE208582C200C409EB /* ListViewController.swift in Sources */,
 				4F95E3E420915F2E00314391 /* UIBezierPath+DrawLinePoints.swift in Sources */,
 				C283C5FF2829385A000881C5 /* CandleDataService.swift in Sources */,
@@ -394,6 +414,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C272EA07282A59E4002F0ABF /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C272EA08282A59E4002F0ABF /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C272EA07282A59E4002F0ABF /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4F560960208443E70078DCFB /* Project object */;
 }
