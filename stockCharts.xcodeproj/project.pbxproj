@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F1D14BB282C09F0005E4082 /* CandlePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1D14BA282C09F0005E4082 /* CandlePosition.swift */; };
+		4F1D14BD282C0A14005E4082 /* VolPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1D14BC282C0A14005E4082 /* VolPosition.swift */; };
 		4F3ED5FE208582C200C409EB /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3ED5FD208582C200C409EB /* ListViewController.swift */; };
 		4F56096C208443E70078DCFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56096B208443E70078DCFB /* AppDelegate.swift */; };
 		4F56096E208443E70078DCFB /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56096D208443E70078DCFB /* BaseNavigationController.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F1D14BA282C09F0005E4082 /* CandlePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandlePosition.swift; sourceTree = "<group>"; };
+		4F1D14BC282C0A14005E4082 /* VolPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolPosition.swift; sourceTree = "<group>"; };
 		4F3ED5FD208582C200C409EB /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		4F560968208443E70078DCFB /* stockCharts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stockCharts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F56096B208443E70078DCFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 			children = (
 				C283C5FD28293814000881C5 /* CandleData.json */,
 				C283C5FE2829385A000881C5 /* CandleDataService.swift */,
+				4F1D14BA282C09F0005E4082 /* CandlePosition.swift */,
+				4F1D14BC282C0A14005E4082 /* VolPosition.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 				C2AA78CE282B9F13008FEB8A /* ShortCandlePlotTheme.swift in Sources */,
 				C2DBDFA4282A5CAB0086FE09 /* ShortCandleChartSubView.swift in Sources */,
 				C283C5FA282934E9000881C5 /* CandleChartViewController.swift in Sources */,
+				4F1D14BB282C09F0005E4082 /* CandlePosition.swift in Sources */,
 				4FACBC96208998C10050DB58 /* PolyLineViewController.swift in Sources */,
 				4F7B2AEB208EDFBD00CAE85B /* ModelStruct.swift in Sources */,
 				C2DBDFA6282A5CFE0086FE09 /* ShortCandleChartView.swift in Sources */,
@@ -251,6 +258,7 @@
 				C283C5FF2829385A000881C5 /* CandleDataService.swift in Sources */,
 				C2AA78CC282B9A90008FEB8A /* ShortCandlePlotModel.swift in Sources */,
 				4F95E3E82091604500314391 /* SlipPolyLineView.swift in Sources */,
+				4F1D14BD282C0A14005E4082 /* VolPosition.swift in Sources */,
 				C2AA78C8282B9850008FEB8A /* ShortCandlePlot.swift in Sources */,
 				4F7B2AE9208ED2FC00CAE85B /* PolyLineView.swift in Sources */,
 			);

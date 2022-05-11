@@ -18,6 +18,13 @@ struct ShortCandlePlotTheme {
     var candleMinWIdth: CGFloat = 2
     var candleMinHight: CGFloat = 0.5
     
+    
+    var volGap: CGFloat = 10
+    
     var riseColor: UIColor = .red
-    var greenColor: UIColor = .green
+    var fallColor: UIColor = .green
+    var defaultColor: UIColor = .yellow
+    
+    var xAxisHeight: CGFloat = 30
+    
 }

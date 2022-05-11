@@ -24,7 +24,14 @@ class ShortCandlePlot: UIView {
     }
 
 //MARK: Draw Charts
-    func drawChats() {
+    func drawLayers() {
+        // 準備資料
+        plotmodel?.clacMaxMinTicks()
+        
+        cleanLayers()
+    }
+    
+    func cleanLayers() {
         
     }
 
