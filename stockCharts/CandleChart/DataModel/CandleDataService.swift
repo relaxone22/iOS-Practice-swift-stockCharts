@@ -11,7 +11,8 @@ import Foundation
 struct CandleData: Codable {
     var code: String
     var type: String
-    var tick: [Tick]
+    var ticks: [Tick]
+
 }
 
 struct Tick: Codable {
@@ -28,26 +29,28 @@ struct Tick: Codable {
 
 
 class CandleDataService {
+    
     static let shared = CandleDataService()
     var list: CandleData?
     
     func loadData() {
         readFile()
-//        print(list)
     }
     
     private func readFile() {
-            let fileName = "CandleData"
-            guard let path = Bundle.main.path(forResource: fileName, ofType: "json") else {
-                return
-            }
-            
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                list = try JSONDecoder().decode(CandleData.self, from: data)
-                
-            } catch {
-                print(error)
-            }
+        
+        let fileName = "CandleData"
+        guard let path = Bundle.main.path(forResource: fileName, ofType: "json") else {
+            return
         }
+        
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+            list = try JSONDecoder().decode(CandleData.self, from: data)
+            
+        }
+        catch {
+            print(error)
+        }
+    }
 }

@@ -9,9 +9,19 @@
 import UIKit
 import SnapKit
 
-class ShortCandleChartView: UIScrollView {
-    var candleChartSubView: ShortCandleChartSubView  = {
-        let view = ShortCandleChartSubView()
+class ShortCandleChartView: UIView {
+    
+    var scrollView: UIScrollView = {
+        let view = UIScrollView()
+        view.isScrollEnabled = true
+        view.bounces = true
+        view.showsVerticalScrollIndicator = false
+        view.backgroundColor = .white
+        return view
+    }()
+    
+    var candlePlot: ShortCandlePlot  = {
+        let view = ShortCandlePlot()
         return view
     }()
     
@@ -23,22 +33,22 @@ class ShortCandleChartView: UIScrollView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-        
     }
-    func loadData(ticks:[Tick]) {
-        candleChartSubView.loadData(ticks: ticks)
+    
+    func updateTick(ticks:[Tick]) {
+        candlePlot.plotmodel?.updateTick(ticks: ticks)
     }
     
     func setupView() {
-        isScrollEnabled = true
-        bounces = true
-        showsVerticalScrollIndicator = false
-        backgroundColor = .white
-        
-        addSubview(candleChartSubView)
-        candleChartSubView.snp.makeConstraints { make in
+        addSubview(scrollView)
+        scrollView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
         
+        addSubview(candlePlot)
+        candlePlot.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+       
     }
 }

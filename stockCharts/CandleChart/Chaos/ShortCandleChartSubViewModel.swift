@@ -41,7 +41,7 @@ class ShortCandleChartSubViewModel {
     func initialize(ticks: [Tick]) {
         
         for tick in ticks {
-            minY = max(Float(tick.close) ?? minY , minY)
+            minY = min(Float(tick.close) ?? minY , minY)
             maxY = max(Float(tick.close) ?? maxY , maxY)
         }
         scaleY = hight / (maxY - minY)
