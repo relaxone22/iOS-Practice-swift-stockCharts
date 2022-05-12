@@ -21,8 +21,8 @@ class CandleChartViewController: UIViewController {
         layout()
         
         CandleDataService.shared.loadData()
-        if let ticks = CandleDataService.shared.list?.tick {
-            candleView.loadData(ticks: ticks)
+        if let ticks = CandleDataService.shared.list?.ticks {
+            candleView.updateTick(ticks: ticks)
         }
     }
     
@@ -30,8 +30,9 @@ class CandleChartViewController: UIViewController {
         
         view.addSubview(candleView)
         candleView.snp.makeConstraints { make in
-            make.top.left.right.equalToSuperview().inset(5)
-            make.bottom.equalToSuperview().inset(30)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(5)
+            make.left.right.equalToSuperview().inset(5)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(5)
         }
     }
 

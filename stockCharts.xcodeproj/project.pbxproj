@@ -29,9 +29,7 @@
 		C2AA78C8282B9850008FEB8A /* ShortCandlePlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA78C7282B9850008FEB8A /* ShortCandlePlot.swift */; };
 		C2AA78CC282B9A90008FEB8A /* ShortCandlePlotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA78CB282B9A90008FEB8A /* ShortCandlePlotModel.swift */; };
 		C2AA78CE282B9F13008FEB8A /* ShortCandlePlotTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA78CD282B9F13008FEB8A /* ShortCandlePlotTheme.swift */; };
-		C2DBDFA4282A5CAB0086FE09 /* ShortCandleChartSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBDFA3282A5CAB0086FE09 /* ShortCandleChartSubView.swift */; };
 		C2DBDFA6282A5CFE0086FE09 /* ShortCandleChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBDFA5282A5CFE0086FE09 /* ShortCandleChartView.swift */; };
-		C2DBDFAD282A7ED40086FE09 /* ShortCandleChartSubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBDFAC282A7ED40086FE09 /* ShortCandleChartSubViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,9 +56,7 @@
 		C2AA78C7282B9850008FEB8A /* ShortCandlePlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCandlePlot.swift; sourceTree = "<group>"; };
 		C2AA78CB282B9A90008FEB8A /* ShortCandlePlotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCandlePlotModel.swift; sourceTree = "<group>"; };
 		C2AA78CD282B9F13008FEB8A /* ShortCandlePlotTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCandlePlotTheme.swift; sourceTree = "<group>"; };
-		C2DBDFA3282A5CAB0086FE09 /* ShortCandleChartSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCandleChartSubView.swift; sourceTree = "<group>"; };
 		C2DBDFA5282A5CFE0086FE09 /* ShortCandleChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCandleChartView.swift; sourceTree = "<group>"; };
-		C2DBDFAC282A7ED40086FE09 /* ShortCandleChartSubViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCandleChartSubViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,12 +125,20 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		C2091555282CBAE00031B57D /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				C283C5F9282934E9000881C5 /* CandleChartViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		C283C5F828293495000881C5 /* CandleChart */ = {
 			isa = PBXGroup;
 			children = (
+				C2091555282CBAE00031B57D /* VC */,
 				C2AA78CA282B9942008FEB8A /* DataModel */,
 				C2AA78C9282B9878008FEB8A /* Chaos */,
-				C283C5F9282934E9000881C5 /* CandleChartViewController.swift */,
 				C2DBDFA5282A5CFE0086FE09 /* ShortCandleChartView.swift */,
 				C2AA78C7282B9850008FEB8A /* ShortCandlePlot.swift */,
 				C2AA78CB282B9A90008FEB8A /* ShortCandlePlotModel.swift */,
@@ -146,8 +150,6 @@
 		C2AA78C9282B9878008FEB8A /* Chaos */ = {
 			isa = PBXGroup;
 			children = (
-				C2DBDFA3282A5CAB0086FE09 /* ShortCandleChartSubView.swift */,
-				C2DBDFAC282A7ED40086FE09 /* ShortCandleChartSubViewModel.swift */,
 			);
 			path = Chaos;
 			sourceTree = "<group>";
@@ -245,14 +247,12 @@
 				4F56096E208443E70078DCFB /* BaseNavigationController.swift in Sources */,
 				4F56096C208443E70078DCFB /* AppDelegate.swift in Sources */,
 				C2AA78CE282B9F13008FEB8A /* ShortCandlePlotTheme.swift in Sources */,
-				C2DBDFA4282A5CAB0086FE09 /* ShortCandleChartSubView.swift in Sources */,
 				C283C5FA282934E9000881C5 /* CandleChartViewController.swift in Sources */,
 				4F1D14BB282C09F0005E4082 /* CandlePosition.swift in Sources */,
 				4FACBC96208998C10050DB58 /* PolyLineViewController.swift in Sources */,
 				4F7B2AEB208EDFBD00CAE85B /* ModelStruct.swift in Sources */,
 				C2DBDFA6282A5CFE0086FE09 /* ShortCandleChartView.swift in Sources */,
 				4F95E3E620915F9200314391 /* SlipPolyLineViewController.swift in Sources */,
-				C2DBDFAD282A7ED40086FE09 /* ShortCandleChartSubViewModel.swift in Sources */,
 				4F3ED5FE208582C200C409EB /* ListViewController.swift in Sources */,
 				4F95E3E420915F2E00314391 /* UIBezierPath+DrawLinePoints.swift in Sources */,
 				C283C5FF2829385A000881C5 /* CandleDataService.swift in Sources */,

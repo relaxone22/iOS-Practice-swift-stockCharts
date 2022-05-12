@@ -15,7 +15,6 @@ class ShortCandleChartView: UIView {
         let view = UIScrollView()
         view.isScrollEnabled = true
         view.bounces = true
-        view.showsVerticalScrollIndicator = false
         view.backgroundColor = .white
         return view
     }()
@@ -36,7 +35,8 @@ class ShortCandleChartView: UIView {
     }
     
     func updateTick(ticks:[Tick]) {
-        candlePlot.plotmodel?.updateTick(ticks: ticks)
+        candlePlot.plotmodel.updateTick(ticks: ticks)
+        candlePlot.drawLayers()
     }
     
     func setupView() {
@@ -45,10 +45,13 @@ class ShortCandleChartView: UIView {
             make.edges.equalToSuperview()
         }
         
-        addSubview(candlePlot)
-        candlePlot.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+        scrollView.contentLayoutGuide.snp.makeConstraints { make in
+            make.edges.equalTo(scrollView.frameLayoutGuide)
         }
-       
+        
+        scrollView.addSubview(candlePlot)
+        candlePlot.snp.makeConstraints { make in
+            make.edges.equalTo(scrollView.contentLayoutGuide)
+        }
     }
 }

@@ -12,7 +12,7 @@ import UIKit
 class ShortCandlePlotModel {
     
     var contentOffsetX:CGFloat = 0
-    var renderWidth: CGFloat = 0
+    var renderWidth: CGFloat = 300
     var frameHight: CGFloat = 300
     
     var viewMinYGap: CGFloat = 15
@@ -62,9 +62,9 @@ class ShortCandlePlotModel {
     // 最初資料
     private var rawTicks:[Tick] = []
     // k線
-    private var candlePositions:[CandlePosition] = []
+    var candlePositions:[CandlePosition] = []
     // 量
-    private var volPositions:[VolPosition] = []
+    var volPositions:[VolPosition] = []
     
     func updateTick(ticks:[Tick]) {
         rawTicks = ticks
