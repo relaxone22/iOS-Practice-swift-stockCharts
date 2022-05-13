@@ -84,7 +84,7 @@ class CandlePriceYAxisPlotHepler: CandleUnitPlotHelper {
                                  store.topChartHeight / 2,
                                  store.topChartHeight - minY,
                                  store.topChartHeight]
-        let midPrice = String(format: ".2%f", (store.maxPrice - store.minPrice))
+        let midPrice = String(format: "%.2f", (store.maxPrice - store.minPrice))
         let priceStrings = ["",
                             "\(store.minPrice)",
                             midPrice,
