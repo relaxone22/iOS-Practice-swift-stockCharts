@@ -10,10 +10,9 @@ import UIKit
 
 class ShortCandlePlot: UIView {
     
-    var plotmodel = ShortCandlePlotModel()
+    var store = CandlePlotStore()
+    var plotTypes:[PlotType] = [.Price, .Vol, .PriceXAxis, .PriceYAxis]
     
-    
-    private var candleLayer = CAShapeLayer()
     
     init() {
         super.init(frame: .zero)
@@ -25,38 +24,19 @@ class ShortCandlePlot: UIView {
 
 //MARK: Draw Charts
     func drawLayers() {
-        // 準備資料
-        plotmodel.clacMaxMinTicks()
-        plotmodel.convertToPositions()
-        
         cleanLayers()
-        
-        let positions =  plotmodel.candlePositions
-        drawCandleLayer(positions: positions)
-        
-        
+        for (index, type) in plotTypes.enumerated() {
+            if let subLayer = store.getUnitLayer(type: type) {
+                layer.addSublayer(subLayer)
+                subLayer.zPosition = CGFloat(plotTypes.count - index)
+            }
+        }
     }
     
     func cleanLayers() {
-        candleLayer.removeFromSuperlayer()
+        layer.sublayers?.removeAll()
     }
     
-    func drawCandleLayer(positions: [CandlePosition]) {
-        candleLayer.sublayers?.removeAll()
-        
-        for position in positions {
-            let path = UIBezierPath(rect: position.rect)
-            path.move(to: position.low)
-            path.move(to: position.high)
-            
-            let layer = CAShapeLayer()
-            layer.path = path.cgPath
-            layer.strokeColor = position.color.cgColor
-            layer.fillColor = position.color.cgColor
-            
-            candleLayer.addSublayer(layer)
-        }
-        layer.addSublayer(candleLayer)
-    }
+   
                 
 }

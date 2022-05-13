@@ -21,6 +21,11 @@ class CandleChartViewController: UIViewController {
         layout()
         
         CandleDataService.shared.loadData()
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         if let ticks = CandleDataService.shared.list?.ticks {
             candleView.updateTick(ticks: ticks)
         }

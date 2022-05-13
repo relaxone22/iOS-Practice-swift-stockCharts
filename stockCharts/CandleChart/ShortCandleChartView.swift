@@ -15,7 +15,8 @@ class ShortCandleChartView: UIView {
         let view = UIScrollView()
         view.isScrollEnabled = true
         view.bounces = true
-        view.backgroundColor = .white
+        view.backgroundColor = .black
+        
         return view
     }()
     
@@ -24,6 +25,9 @@ class ShortCandleChartView: UIView {
         return view
     }()
     
+    deinit {
+        scrollView.removeObserver(self, forKeyPath: #keyPath(UIScrollView.contentOffset))
+    }
     
     init() {
         super.init(frame: .zero)
@@ -34,13 +38,28 @@ class ShortCandleChartView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override public func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == #keyPath(UIScrollView.contentOffset) {
+            candlePlot.drawLayers()
+        }
+    }
+    
     func updateTick(ticks:[Tick]) {
-        candlePlot.plotmodel.updateTick(ticks: ticks)
+        candlePlot.store.delegate = self
+        candlePlot.store.updateTick(ticks: ticks)
         candlePlot.drawLayers()
+        
+        let contentWidth = max(frame.width, candlePlot.store.candlePlotFullWidth)
+        
+        scrollView.contentLayoutGuide.snp.makeConstraints { make in
+            make.top.bottom.leading.equalToSuperview()
+            make.width.equalTo(contentWidth)
+        }
     }
     
     func setupView() {
         addSubview(scrollView)
+        scrollView.addObserver(self, forKeyPath: #keyPath(UIScrollView.contentOffset), options: .new, context: nil)
         scrollView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
@@ -54,4 +73,20 @@ class ShortCandleChartView: UIView {
             make.edges.equalTo(scrollView.contentLayoutGuide)
         }
     }
+}
+
+extension ShortCandleChartView:CandlePlotStoreDelegate {
+    var contentOffsetX: CGFloat {
+        return scrollView.contentOffset.x
+    }
+    
+    var renderWidth: CGFloat {
+        return frame.width
+    }
+    
+    var frameHight: CGFloat {
+        return frame.height
+    }
+    
+    
 }

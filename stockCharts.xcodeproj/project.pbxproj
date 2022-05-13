@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F1D14BB282C09F0005E4082 /* CandlePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1D14BA282C09F0005E4082 /* CandlePosition.swift */; };
-		4F1D14BD282C0A14005E4082 /* VolPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1D14BC282C0A14005E4082 /* VolPosition.swift */; };
 		4F3ED5FE208582C200C409EB /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3ED5FD208582C200C409EB /* ListViewController.swift */; };
 		4F56096C208443E70078DCFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56096B208443E70078DCFB /* AppDelegate.swift */; };
 		4F56096E208443E70078DCFB /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56096D208443E70078DCFB /* BaseNavigationController.swift */; };
@@ -16,25 +14,27 @@
 		4F560976208443E80078DCFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F560974208443E80078DCFB /* LaunchScreen.storyboard */; };
 		4F7B2AE9208ED2FC00CAE85B /* PolyLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7B2AE8208ED2FC00CAE85B /* PolyLineView.swift */; };
 		4F7B2AEB208EDFBD00CAE85B /* ModelStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7B2AEA208EDFBD00CAE85B /* ModelStruct.swift */; };
+		4F8ED9D7282E28F3003664DD /* CandlePriceXAxisPlotHepler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8ED9D6282E28F3003664DD /* CandlePriceXAxisPlotHepler.swift */; };
+		4F8ED9D9282E2919003664DD /* CandlePriceYAxisPlotHepler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8ED9D8282E2919003664DD /* CandlePriceYAxisPlotHepler.swift */; };
 		4F95E3E420915F2E00314391 /* UIBezierPath+DrawLinePoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F95E3E320915F2E00314391 /* UIBezierPath+DrawLinePoints.swift */; };
 		4F95E3E620915F9200314391 /* SlipPolyLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F95E3E520915F9200314391 /* SlipPolyLineViewController.swift */; };
 		4F95E3E82091604500314391 /* SlipPolyLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F95E3E72091604500314391 /* SlipPolyLineView.swift */; };
 		4FACBC96208998C10050DB58 /* PolyLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FACBC95208998C10050DB58 /* PolyLineViewController.swift */; };
 		4FB665742090340E00978EE8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4FB665732090340E00978EE8 /* README.md */; };
 		4FB6657B2090390200978EE8 /* polyLineChart.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4FB6657A2090390200978EE8 /* polyLineChart.gif */; };
+		4FF69D1D282D429C0036E4EC /* CandleVolPlotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF69D1C282D429C0036E4EC /* CandleVolPlotHelper.swift */; };
+		4FF69D1F282D47070036E4EC /* String+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF69D1E282D47070036E4EC /* String+Addition.swift */; };
 		C272EA09282A59E4002F0ABF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C272EA08282A59E4002F0ABF /* SnapKit */; };
 		C283C5FA282934E9000881C5 /* CandleChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283C5F9282934E9000881C5 /* CandleChartViewController.swift */; };
 		C283C5FF2829385A000881C5 /* CandleDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283C5FE2829385A000881C5 /* CandleDataService.swift */; };
 		C283C60028293FFA000881C5 /* CandleData.json in Resources */ = {isa = PBXBuildFile; fileRef = C283C5FD28293814000881C5 /* CandleData.json */; };
 		C2AA78C8282B9850008FEB8A /* ShortCandlePlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA78C7282B9850008FEB8A /* ShortCandlePlot.swift */; };
-		C2AA78CC282B9A90008FEB8A /* ShortCandlePlotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA78CB282B9A90008FEB8A /* ShortCandlePlotModel.swift */; };
-		C2AA78CE282B9F13008FEB8A /* ShortCandlePlotTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA78CD282B9F13008FEB8A /* ShortCandlePlotTheme.swift */; };
+		C2AA78CC282B9A90008FEB8A /* CandlePlotStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA78CB282B9A90008FEB8A /* CandlePlotStore.swift */; };
+		C2AA78CE282B9F13008FEB8A /* CandlePricePlotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA78CD282B9F13008FEB8A /* CandlePricePlotHelper.swift */; };
 		C2DBDFA6282A5CFE0086FE09 /* ShortCandleChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBDFA5282A5CFE0086FE09 /* ShortCandleChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4F1D14BA282C09F0005E4082 /* CandlePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandlePosition.swift; sourceTree = "<group>"; };
-		4F1D14BC282C0A14005E4082 /* VolPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolPosition.swift; sourceTree = "<group>"; };
 		4F3ED5FD208582C200C409EB /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		4F560968208443E70078DCFB /* stockCharts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stockCharts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F56096B208443E70078DCFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,18 +44,22 @@
 		4F560977208443E80078DCFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F7B2AE8208ED2FC00CAE85B /* PolyLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolyLineView.swift; sourceTree = "<group>"; };
 		4F7B2AEA208EDFBD00CAE85B /* ModelStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelStruct.swift; sourceTree = "<group>"; };
+		4F8ED9D6282E28F3003664DD /* CandlePriceXAxisPlotHepler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandlePriceXAxisPlotHepler.swift; sourceTree = "<group>"; };
+		4F8ED9D8282E2919003664DD /* CandlePriceYAxisPlotHepler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandlePriceYAxisPlotHepler.swift; sourceTree = "<group>"; };
 		4F95E3E320915F2E00314391 /* UIBezierPath+DrawLinePoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+DrawLinePoints.swift"; sourceTree = "<group>"; };
 		4F95E3E520915F9200314391 /* SlipPolyLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipPolyLineViewController.swift; sourceTree = "<group>"; };
 		4F95E3E72091604500314391 /* SlipPolyLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipPolyLineView.swift; sourceTree = "<group>"; };
 		4FACBC95208998C10050DB58 /* PolyLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolyLineViewController.swift; sourceTree = "<group>"; };
 		4FB665732090340E00978EE8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4FB6657A2090390200978EE8 /* polyLineChart.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = polyLineChart.gif; sourceTree = "<group>"; };
+		4FF69D1C282D429C0036E4EC /* CandleVolPlotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleVolPlotHelper.swift; sourceTree = "<group>"; };
+		4FF69D1E282D47070036E4EC /* String+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Addition.swift"; sourceTree = "<group>"; };
 		C283C5F9282934E9000881C5 /* CandleChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleChartViewController.swift; sourceTree = "<group>"; };
 		C283C5FD28293814000881C5 /* CandleData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CandleData.json; sourceTree = "<group>"; };
 		C283C5FE2829385A000881C5 /* CandleDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleDataService.swift; sourceTree = "<group>"; };
 		C2AA78C7282B9850008FEB8A /* ShortCandlePlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCandlePlot.swift; sourceTree = "<group>"; };
-		C2AA78CB282B9A90008FEB8A /* ShortCandlePlotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCandlePlotModel.swift; sourceTree = "<group>"; };
-		C2AA78CD282B9F13008FEB8A /* ShortCandlePlotTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCandlePlotTheme.swift; sourceTree = "<group>"; };
+		C2AA78CB282B9A90008FEB8A /* CandlePlotStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandlePlotStore.swift; sourceTree = "<group>"; };
+		C2AA78CD282B9F13008FEB8A /* CandlePricePlotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandlePricePlotHelper.swift; sourceTree = "<group>"; };
 		C2DBDFA5282A5CFE0086FE09 /* ShortCandleChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCandleChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +129,15 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		4FF69D1B282D3BE20036E4EC /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				C283C5FE2829385A000881C5 /* CandleDataService.swift */,
+				C283C5FD28293814000881C5 /* CandleData.json */,
+			);
+			path = TestData;
+			sourceTree = "<group>";
+		};
 		C2091555282CBAE00031B57D /* VC */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,33 +149,18 @@
 		C283C5F828293495000881C5 /* CandleChart */ = {
 			isa = PBXGroup;
 			children = (
+				4FF69D1B282D3BE20036E4EC /* TestData */,
 				C2091555282CBAE00031B57D /* VC */,
-				C2AA78CA282B9942008FEB8A /* DataModel */,
-				C2AA78C9282B9878008FEB8A /* Chaos */,
 				C2DBDFA5282A5CFE0086FE09 /* ShortCandleChartView.swift */,
 				C2AA78C7282B9850008FEB8A /* ShortCandlePlot.swift */,
-				C2AA78CB282B9A90008FEB8A /* ShortCandlePlotModel.swift */,
-				C2AA78CD282B9F13008FEB8A /* ShortCandlePlotTheme.swift */,
+				C2AA78CB282B9A90008FEB8A /* CandlePlotStore.swift */,
+				C2AA78CD282B9F13008FEB8A /* CandlePricePlotHelper.swift */,
+				4F8ED9D6282E28F3003664DD /* CandlePriceXAxisPlotHepler.swift */,
+				4F8ED9D8282E2919003664DD /* CandlePriceYAxisPlotHepler.swift */,
+				4FF69D1C282D429C0036E4EC /* CandleVolPlotHelper.swift */,
+				4FF69D1E282D47070036E4EC /* String+Addition.swift */,
 			);
 			path = CandleChart;
-			sourceTree = "<group>";
-		};
-		C2AA78C9282B9878008FEB8A /* Chaos */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Chaos;
-			sourceTree = "<group>";
-		};
-		C2AA78CA282B9942008FEB8A /* DataModel */ = {
-			isa = PBXGroup;
-			children = (
-				C283C5FD28293814000881C5 /* CandleData.json */,
-				C283C5FE2829385A000881C5 /* CandleDataService.swift */,
-				4F1D14BA282C09F0005E4082 /* CandlePosition.swift */,
-				4F1D14BC282C0A14005E4082 /* VolPosition.swift */,
-			);
-			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,19 +244,21 @@
 			files = (
 				4F56096E208443E70078DCFB /* BaseNavigationController.swift in Sources */,
 				4F56096C208443E70078DCFB /* AppDelegate.swift in Sources */,
-				C2AA78CE282B9F13008FEB8A /* ShortCandlePlotTheme.swift in Sources */,
+				C2AA78CE282B9F13008FEB8A /* CandlePricePlotHelper.swift in Sources */,
 				C283C5FA282934E9000881C5 /* CandleChartViewController.swift in Sources */,
-				4F1D14BB282C09F0005E4082 /* CandlePosition.swift in Sources */,
 				4FACBC96208998C10050DB58 /* PolyLineViewController.swift in Sources */,
+				4F8ED9D7282E28F3003664DD /* CandlePriceXAxisPlotHepler.swift in Sources */,
+				4FF69D1F282D47070036E4EC /* String+Addition.swift in Sources */,
 				4F7B2AEB208EDFBD00CAE85B /* ModelStruct.swift in Sources */,
 				C2DBDFA6282A5CFE0086FE09 /* ShortCandleChartView.swift in Sources */,
 				4F95E3E620915F9200314391 /* SlipPolyLineViewController.swift in Sources */,
+				4FF69D1D282D429C0036E4EC /* CandleVolPlotHelper.swift in Sources */,
 				4F3ED5FE208582C200C409EB /* ListViewController.swift in Sources */,
 				4F95E3E420915F2E00314391 /* UIBezierPath+DrawLinePoints.swift in Sources */,
 				C283C5FF2829385A000881C5 /* CandleDataService.swift in Sources */,
-				C2AA78CC282B9A90008FEB8A /* ShortCandlePlotModel.swift in Sources */,
+				4F8ED9D9282E2919003664DD /* CandlePriceYAxisPlotHepler.swift in Sources */,
+				C2AA78CC282B9A90008FEB8A /* CandlePlotStore.swift in Sources */,
 				4F95E3E82091604500314391 /* SlipPolyLineView.swift in Sources */,
-				4F1D14BD282C0A14005E4082 /* VolPosition.swift in Sources */,
 				C2AA78C8282B9850008FEB8A /* ShortCandlePlot.swift in Sources */,
 				4F7B2AE9208ED2FC00CAE85B /* PolyLineView.swift in Sources */,
 			);
