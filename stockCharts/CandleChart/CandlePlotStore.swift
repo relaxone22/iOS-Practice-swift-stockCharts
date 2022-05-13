@@ -37,9 +37,11 @@ enum PlotType {
 }
 
 struct CandlePlotTheme {
+    static let defaultCandleWidth: CGFloat = 5
+    
     var topChartScale: CGFloat = 0.7
     
-    var candleWidth: CGFloat = 5
+    var candleWidth: CGFloat = CandlePlotTheme.defaultCandleWidth
     var candleGap: CGFloat = 2
     var candleMaxWidth: CGFloat = 30
     var candleMinWIdth: CGFloat = 2
@@ -165,6 +167,21 @@ class CandlePlotStore {
             minPrice = min(minPrice, raw.low.cgFloatValue)
             maxVol = max(maxVol, raw.vol.cgFloatValue)
         }
+    }
+    
+    private func tickIndex(pointX: CGFloat) -> Int {
+        let tmp = pointX / ( theme.candleWidth + theme.candleGap)
+        return Int(tmp)
+    }
+    
+    func scaleCandleWidth(pointCenterX:CGFloat, diffScale:Double, velocity:CGFloat, callBack:() -> ()) {
+        
+        var newWidth =  CandlePlotTheme.defaultCandleWidth * (1 + diffScale * (velocity > 0 ? 1 : -1))
+        newWidth = max(newWidth, CGFloat(3))
+        newWidth = min(newWidth, CGFloat(50))
+        theme.candleWidth = newWidth
+        // 調整contentize
+        callBack()
     }
 }
 

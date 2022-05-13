@@ -72,6 +72,36 @@ class ShortCandleChartView: UIView {
         candlePlot.snp.makeConstraints { make in
             make.edges.equalTo(scrollView.contentLayoutGuide)
         }
+        let pinch = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(_:)))
+        candlePlot.addGestureRecognizer(pinch)
+        
+    }
+    
+    @objc func handlePinch(_ recognizer: UIPinchGestureRecognizer) {
+        
+        guard recognizer.numberOfTouches == 2 else { return }
+        
+        let scale = recognizer.scale
+        let defaultScale = 1.0
+        let diff = scale - defaultScale
+        
+        if recognizer.state == .began {
+            scrollView.isScrollEnabled = false
+        }
+        else {
+            scrollView.isScrollEnabled = true
+        }
+        
+        if abs(diff) != 0 {
+            let point1 = recognizer.location(ofTouch: 0, in: self)
+            let point2 = recognizer.location(ofTouch: 1, in: self)
+            
+            let pointCenterX = max(0, (point1.x + point2.x) / 2 + scrollView.contentOffset.x)
+            candlePlot.store.scaleCandleWidth(pointCenterX: pointCenterX, diffScale: diff, velocity: recognizer.velocity, callBack: {
+                candlePlot.drawLayers()
+            })
+        }
+        
     }
 }
 
