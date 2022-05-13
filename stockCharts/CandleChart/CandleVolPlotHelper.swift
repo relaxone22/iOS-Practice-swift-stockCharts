@@ -61,7 +61,7 @@ class CandleVolPlotHelper: CandleUnitPlotHelper {
         positions.removeAll()
         
         if store.maxVol > 0 {
-            volUnit = (store.bottomChartHeight - 2 * theme.volGap) / store.maxVol
+            volUnit = (store.bottomChartHeight - 1 * theme.volGap) / store.maxVol
         }
         
         let count = min(store.startIndex + store.showCandleCount, store.rawTicks.count)

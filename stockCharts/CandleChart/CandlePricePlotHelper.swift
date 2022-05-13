@@ -64,9 +64,8 @@ class CandlePricePlotHelper: CandleUnitPlotHelper {
         let minY = theme.viewMinYGap
         let maxDiff = store.maxPrice - store.minPrice
         
-        if maxDiff > 0, store.maxVol > 0 {
+        if maxDiff > 0 {
             priceUnit = (store.topChartHeight - 2 * minY) / maxDiff
-            
         }
         
         let count = min(store.startIndex + store.showCandleCount, store.rawTicks.count)
@@ -89,7 +88,7 @@ class CandlePricePlotHelper: CandleUnitPlotHelper {
             var rectHieght = theme.candleMinHight
             var rectY = pointCloseY
             
-            let diff = pointCloseY - pointOpenY
+            let diff = raw.close.cgFloatValue - raw.open.cgFloatValue
             if (diff > 0) {
                 fillCandleColor = theme.riseColor
                 rectY = pointCloseY

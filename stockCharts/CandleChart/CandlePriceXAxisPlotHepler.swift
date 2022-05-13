@@ -41,7 +41,7 @@ class CandlePriceXAxisPlotHepler: CandleUnitPlotHelper {
         for position in positions {
             let path = UIBezierPath()
             path.move(to: position.timeX)
-            let endPoint = CGPoint(x: position.timeX.x, y: store.topChartHeight + theme.viewMinYGap * 2)
+            let endPoint = CGPoint(x: position.timeX.x, y: store.topChartHeight)
             path.addLine(to: endPoint)
             
             let lineLayer = CAShapeLayer()

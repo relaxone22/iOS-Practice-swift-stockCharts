@@ -85,7 +85,7 @@ extension ShortCandleChartView:CandlePlotStoreDelegate {
     }
     
     var frameHight: CGFloat {
-        return frame.height
+        return bounds.height
     }
     
     

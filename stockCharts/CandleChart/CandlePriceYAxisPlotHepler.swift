@@ -41,16 +41,16 @@ class CandlePriceYAxisPlotHepler: CandleUnitPlotHelper {
         for position in positions {
             let path = UIBezierPath()
             path.move(to: position.priceY)
-            let endPoint = CGPoint(x: store.renderWidth, y: position.priceY.y)
+            let endPoint = CGPoint(x: position.priceY.x + store.renderWidth, y: position.priceY.y)
             path.addLine(to: endPoint)
-
+            
             let lineLayer = CAShapeLayer()
             lineLayer.path = path.cgPath
             lineLayer.lineWidth = 1
             lineLayer.strokeColor = theme.priceYAxisLineColor.cgColor
             lineLayer.fillColor = theme.priceYAxisLineColor.cgColor
             yAxisLayer.addSublayer(lineLayer)
-
+            
             let textLayer = CATextLayer()
             textLayer.string = position.priceString
             textLayer.fontSize = theme.priceYAxisFontSize
@@ -58,16 +58,16 @@ class CandlePriceYAxisPlotHepler: CandleUnitPlotHelper {
             textLayer.backgroundColor = UIColor.clear.cgColor
             textLayer.alignmentMode = kCAAlignmentCenter
             textLayer.contentsScale = UIScreen.main.scale
-
+            
             let textSize = position.priceString.getTextSize(size: theme.priceYAxisFontSize)
-            let textX = store.renderWidth - textSize.width
+            let textX = endPoint.x - textSize.width
             let texty = endPoint.y
             let textWidth = textSize.width
             let textHeight = textSize.height
-
+            
             let textFarme = CGRect(x: textX, y: texty, width: textWidth, height: textHeight)
             textLayer.frame = textFarme
-
+            
             yAxisLayer.addSublayer(textLayer)
         }
         return yAxisLayer
@@ -78,19 +78,21 @@ class CandlePriceYAxisPlotHepler: CandleUnitPlotHelper {
         
         let minY = theme.viewMinYGap
         
+        
         let pointYs:[CGFloat] = [1,
-                                minY,
-                                (store.maxPrice - store.minPrice) / 2 + minY,
-                                store.topChartHeight - minY,
-                                store.topChartHeight - 1]
-        let priceStrings = ["QQQ",
-                            "TTT",
-                            "\((store.maxPrice - store.minPrice) / 2)",
+                                 minY,
+                                 store.topChartHeight / 2,
+                                 store.topChartHeight - minY,
+                                 store.topChartHeight]
+        let midPrice = String(format: ".2%f", (store.maxPrice - store.minPrice))
+        let priceStrings = ["",
+                            "\(store.minPrice)",
+                            midPrice,
                             "\(store.maxPrice)",
-                            "QQQ"]
+                            ""]
         
         for (index, pointY) in pointYs.enumerated() {
-            let point = CGPoint(x: 0, y: pointY)
+            let point = CGPoint(x: store.startX, y: pointY)
             let position = PriceYAxisPosition(priceY: point, priceString: priceStrings[index])
             positions.append(position)
         }
