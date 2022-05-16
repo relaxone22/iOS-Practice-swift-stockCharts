@@ -44,7 +44,7 @@ struct CandlePlotTheme {
     var candleWidth: CGFloat = CandlePlotTheme.defaultCandleWidth
     var candleGap: CGFloat = 2
     var candleMaxWidth: CGFloat = 30
-    var candleMinWIdth: CGFloat = 2
+    var candleMinWidth: CGFloat = 2
     var candleMinHight: CGFloat = 0.5
     
     var timeXAxisCount = 3
@@ -110,13 +110,13 @@ class CandlePlotStore {
         let leftCandleCount = Int(startX / (theme.candleWidth + theme.candleGap))
         let value = leftCandleCount - rawTicks.count
         
-        if value == 0 {
-            return leftCandleCount
+        if (value > 0) {
+            return rawTicks.count
         }
-        else {
-            let subtraction = (value > 0) ? -1 : 1
-            return leftCandleCount + subtraction
+        else if (value < 0) {
+            return leftCandleCount + 1
         }
+        return leftCandleCount
     }
     
     var startX: CGFloat {
@@ -174,14 +174,24 @@ class CandlePlotStore {
         return Int(tmp)
     }
     
-    func scaleCandleWidth(pointCenterX:CGFloat, diffScale:Double, velocity:CGFloat, callBack:() -> ()) {
+    func scaleCandleWidth(pointCenterX:CGFloat, diffScale:Double, velocity:CGFloat, callBack:(CGFloat) -> ()) {
         
-        var newWidth =  CandlePlotTheme.defaultCandleWidth * (1 + diffScale * (velocity > 0 ? 1 : -1))
-        newWidth = max(newWidth, CGFloat(3))
-        newWidth = min(newWidth, CGFloat(50))
+        let kScaleFactor: CGFloat = 0.06
+        let kScaleBound: CGFloat = 0.03
+        
+        guard abs(diffScale) >= kScaleBound else {
+            return
+        }
+        
+        var newWidth =  theme.candleWidth * (1 + kScaleFactor * (velocity > 0 ? 1 : -1))
+        newWidth = max(newWidth, CGFloat(theme.candleMinWidth))
+        newWidth = min(newWidth, CGFloat(theme.candleMaxWidth))
+        
+        let oldStartIndex = startIndex
         theme.candleWidth = newWidth
         // 調整contentize
-        callBack()
+        let newContentOffsetX = CGFloat(oldStartIndex) * ( theme.candleWidth + theme.candleGap)
+        callBack(newContentOffsetX)
     }
 }
 

@@ -49,12 +49,17 @@ class ShortCandleChartView: UIView {
         candlePlot.store.updateTick(ticks: ticks)
         candlePlot.drawLayers()
         
+        adjustContentWidth()
+    }
+    
+    func adjustContentWidth() {
         let contentWidth = max(frame.width, candlePlot.store.candlePlotFullWidth)
         
-        scrollView.contentLayoutGuide.snp.makeConstraints { make in
+        scrollView.contentLayoutGuide.snp.remakeConstraints { make in
             make.top.bottom.leading.equalToSuperview()
             make.width.equalTo(contentWidth)
         }
+        
     }
     
     func setupView() {
@@ -97,7 +102,9 @@ class ShortCandleChartView: UIView {
             let point2 = recognizer.location(ofTouch: 1, in: self)
             
             let pointCenterX = max(0, (point1.x + point2.x) / 2 + scrollView.contentOffset.x)
-            candlePlot.store.scaleCandleWidth(pointCenterX: pointCenterX, diffScale: diff, velocity: recognizer.velocity, callBack: {
+            candlePlot.store.scaleCandleWidth(pointCenterX: pointCenterX, diffScale: diff, velocity: recognizer.velocity, callBack: { newContentOffsetX in
+                adjustContentWidth()
+                scrollView.contentOffset.x = newContentOffsetX
                 candlePlot.drawLayers()
             })
         }
