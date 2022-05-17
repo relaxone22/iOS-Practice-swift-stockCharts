@@ -105,4 +105,23 @@ class CandlePricePlotHelper: CandleUnitPlotHelper {
             positions.append(candele)
         }
     }
+    
+    func selectTickIndexPoint( tickIndex:Int) -> CGPoint {
+        let raw = store.rawTicks[tickIndex]
+        
+        let minY = theme.viewMinYGap
+        let maxDiff = store.maxPrice - store.minPrice
+        
+        if maxDiff > 0 {
+            priceUnit = (store.topChartHeight - 2 * minY) / maxDiff
+        }
+        
+        let pointY = (store.maxPrice - raw.close.cgFloatValue) * priceUnit + minY
+        
+        
+        let pointLeft = store.startX + CGFloat(tickIndex - store.startIndex) * (theme.candleWidth + theme.candleGap)
+        let pointX = pointLeft + theme.candleWidth / 2.0
+        
+        return CGPoint(x: pointX, y: pointY)
+    }
 }

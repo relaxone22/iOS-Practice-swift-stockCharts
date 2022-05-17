@@ -89,4 +89,19 @@ class CandleVolPlotHelper: CandleUnitPlotHelper {
             positions.append(volPoint)
         }
     }
+    
+    func selectTickIndexPoint( tickIndex:Int) -> CGPoint {
+        let raw = store.rawTicks[tickIndex]
+        
+        if store.maxVol > 0 {
+            volUnit = (store.bottomChartHeight - 1 * theme.volGap) / store.maxVol
+        }
+        let vol = raw.vol.cgFloatValue * volUnit
+        let pointY = store.frameHight - vol
+        
+        let pointLeft = store.startX + CGFloat(tickIndex - store.startIndex) * (theme.candleWidth + theme.candleGap)
+        let pointX = pointLeft + theme.candleWidth / 2.0
+        
+        return CGPoint(x: pointX, y: pointY)
+    }
 }

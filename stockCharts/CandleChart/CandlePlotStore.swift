@@ -12,6 +12,14 @@ import UIKit
 protocol CandleUnitPlotHelper {
     var plotType:PlotType { get }
     var plotlayer:CAShapeLayer { get }
+    
+    func selectTickIndexPoint( tickIndex:Int) -> CGPoint
+}
+
+extension CandleUnitPlotHelper {
+    func selectTickIndexPoint( tickIndex:Int) -> CGPoint {
+        return .zero
+    }
 }
 
 enum PlotType {
@@ -68,6 +76,9 @@ struct CandlePlotTheme {
     var xAxisHeight: CGFloat = 30
     
     var viewMinYGap: CGFloat = 15
+    
+    var checkLineWidth: CGFloat = 1
+    var checkLineColor: UIColor = .orange
 }
 
 protocol CandlePlotStoreDelegate {
@@ -192,6 +203,16 @@ class CandlePlotStore {
         // 調整contentize
         let newContentOffsetX = CGFloat(oldStartIndex) * ( theme.candleWidth + theme.candleGap)
         callBack(newContentOffsetX)
+    }
+    
+    func candlePointLocation(point: CGPoint, callback: (CGPoint, CGPoint) -> ()) {
+        let pointIndex = tickIndex(pointX: point.x)
+        
+        let pricePoint = PlotType.Price.getLayerHelper(self)?.selectTickIndexPoint(tickIndex: pointIndex) ?? .zero
+        let volPoint = PlotType.Vol.getLayerHelper(self)?.selectTickIndexPoint(tickIndex: pointIndex) ?? .zero
+        
+        callback(pricePoint, volPoint)
+        
     }
 }
 

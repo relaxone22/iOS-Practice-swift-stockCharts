@@ -25,6 +25,13 @@ class ShortCandleChartView: UIView {
         return view
     }()
     
+    lazy var checkLineView: ShortCandleCheckLineView = {
+        let width = candlePlot.store.theme.checkLineWidth
+        let color = candlePlot.store.theme.checkLineColor
+        let view = ShortCandleCheckLineView(lineWidth: width, lineColor: color)
+        return view
+    }()
+    
     deinit {
         scrollView.removeObserver(self, forKeyPath: #keyPath(UIScrollView.contentOffset))
     }
@@ -80,6 +87,29 @@ class ShortCandleChartView: UIView {
         let pinch = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(_:)))
         candlePlot.addGestureRecognizer(pinch)
         
+        let long = UILongPressGestureRecognizer(target: self, action: #selector(longPress(_:)))
+        candlePlot.addGestureRecognizer(long)
+        
+        addSubview(checkLineView)
+        checkLineView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
+    }
+    
+    @objc func longPress(_ recognizer: UIPinchGestureRecognizer) {
+        let state = recognizer.state
+        if state == .began || state == .changed {
+            let point = recognizer.location(in: candlePlot)
+            candlePlot.store.candlePointLocation(point: point) { pricePoint, volPoint in
+                let mapPricePoint = CGPoint(x: pricePoint.x - scrollView.contentOffset.x, y: pricePoint.y)
+                let mapVolPoint = CGPoint(x: volPoint.x - scrollView.contentOffset.x, y: volPoint.y)
+                checkLineView.drawCheckLineLayer(price: mapPricePoint, vol: mapVolPoint)
+            }
+        }
+        else if state == .ended {
+            checkLineView.removeCheckLine()
+        }
     }
     
     @objc func handlePinch(_ recognizer: UIPinchGestureRecognizer) {

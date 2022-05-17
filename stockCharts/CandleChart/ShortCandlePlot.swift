@@ -10,6 +10,8 @@ import UIKit
 
 class ShortCandlePlot: UIView {
     
+    var checkLineLayer = CAShapeLayer()
+    
     var store = CandlePlotStore()
     var plotTypes:[PlotType] = [.Price, .Vol, .PriceXAxis, .PriceYAxis]
     
@@ -36,7 +38,4 @@ class ShortCandlePlot: UIView {
     func cleanLayers() {
         layer.sublayers?.removeAll()
     }
-    
-   
-                
 }

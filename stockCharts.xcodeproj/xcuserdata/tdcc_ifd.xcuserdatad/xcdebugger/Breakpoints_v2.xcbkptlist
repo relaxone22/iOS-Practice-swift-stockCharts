@@ -39,22 +39,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F2FE7C13-28B1-42AA-85AF-5A8E455DF526"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "stockCharts/CandleChart/ShortCandlePlot.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "drawCandleLayer(positions:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "86F21E55-3346-43C1-93D6-9B9899C47042"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -99,16 +83,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "09641BEC-674C-46EC-8509-4E08976AF5EB"
+            uuid = "8BBDB21D-4089-4C72-8C96-68F75C2EC19F"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "stockCharts/CandleChart/CandlePlotStore.swift"
+            filePath = "stockCharts/CandleChart/ShortCandleChartView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
-            landmarkName = "scaleCandleWidth(pointCenterX:diffScale:velocity:callBack:)"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "longPress(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
