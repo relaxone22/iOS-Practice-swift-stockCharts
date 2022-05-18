@@ -39,6 +39,16 @@
                ReferencedContainer = "container:stockCharts.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C21D5C502834E66B00DBB6A1"
+               BuildableName = "stockChartsUITests.xctest"
+               BlueprintName = "stockChartsUITests"
+               ReferencedContainer = "container:stockCharts.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

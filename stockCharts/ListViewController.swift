@@ -28,6 +28,7 @@ class ListViewController: UITableViewController {
         tableView.dataSource = self
         tableView.cellLayoutMarginsFollowReadableWidth = false
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: kTableCellIdentifer)
+        tableView.accessibilityIdentifier = "mytable"
     }
 }
 
@@ -55,9 +56,9 @@ extension ListViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: kTableCellIdentifer, for: indexPath)
         let chart = chartList.charts[indexPath.row]
-    
-        cell.textLabel?.text = chart.title
         
+        cell.textLabel?.text = chart.title
+        cell.accessibilityIdentifier = chart.title
         return cell
     }
 }
