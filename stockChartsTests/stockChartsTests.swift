@@ -54,10 +54,13 @@ class stockChartsTests: XCTestCase {
             guard let ticks = service.list?.ticks else {
                 return
             }
-            let store = CandlePlotStore()
-            store.updateTick(ticks: ticks)
-            let helper = PlotType.Price.getLayerHelper(store)
-            let _ = helper?.plotlayer
+            
+            for _ in 0..<1000 {
+                let store = CandlePlotStore()
+                store.updateTick(ticks: ticks)
+                let helper = PlotType.Price.getLayerHelper(store)
+                let _ = helper?.plotlayer
+            }
         }
     }
 
