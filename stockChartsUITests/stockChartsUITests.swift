@@ -18,21 +18,49 @@ class stockChartsUITests: XCTestCase {
         XCUIDevice.shared.orientation = .portrait
         continueAfterFailure = false
         
-        tableView = app.tables["mytable"]
+        
         app.launch()
     }
     
     func testShowCandlePlot() throws {
         
+        
+        
+        tableView = app.tables["mytable"]
         let cell = tableView.cells.containing(.cell, identifier: "k線圖")
         cell.element.tap()
         
         let element = app.scrollViews.children(matching: .other).element(boundBy: 0)
+        if element.waitForExistence(timeout: 5) != true {
+            XCTFail()
+        }
         element.swipeLeft()
+        takePhoto()
         element.swipeLeft()
         element.swipeRight()
+        
+        
+        
+        element.press(forDuration: 3)
+        takePhoto()
+        
+//        let start = element.coordinate(withNormalizedOffset: CGVector(dx: 0.8, dy: 0.5))
+//        start.press(forDuration: 3)
+//        let finish = element.coordinate(withNormalizedOffset: CGVector(dx: 0.4, dy: 0.5))
+//        finish.press(forDuration: 3)
+//        finish.press(forDuration: 3, thenDragTo: start)
+        
         element.swipeRight()
-        element/*@START_MENU_TOKEN@*/.press(forDuration: 3.7);/*[[".tap()",".press(forDuration: 3.7);"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        
+        app.navigationBars["k線圖"].buttons["Demo"].tap()
+                
+    }
+    
+    func takePhoto() {
+        let fullScreenshot = XCUIScreen.main.screenshot()
+        let screenshot = XCTAttachment(screenshot: fullScreenshot)
+        screenshot.lifetime = .keepAlways
+        add(screenshot)
         
     }
 
