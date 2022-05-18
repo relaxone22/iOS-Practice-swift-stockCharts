@@ -25,6 +25,7 @@
 		4FF69D1D282D429C0036E4EC /* CandleVolPlotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF69D1C282D429C0036E4EC /* CandleVolPlotHelper.swift */; };
 		4FF69D1F282D47070036E4EC /* String+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF69D1E282D47070036E4EC /* String+Addition.swift */; };
 		C21D5C3F2833419200DBB6A1 /* ShortCandleCheckLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21D5C3E2833419200DBB6A1 /* ShortCandleCheckLineView.swift */; };
+		C21D5C472834CA8E00DBB6A1 /* stockChartsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21D5C462834CA8E00DBB6A1 /* stockChartsTests.swift */; };
 		C272EA09282A59E4002F0ABF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C272EA08282A59E4002F0ABF /* SnapKit */; };
 		C283C5FA282934E9000881C5 /* CandleChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283C5F9282934E9000881C5 /* CandleChartViewController.swift */; };
 		C283C5FF2829385A000881C5 /* CandleDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283C5FE2829385A000881C5 /* CandleDataService.swift */; };
@@ -34,6 +35,16 @@
 		C2AA78CE282B9F13008FEB8A /* CandlePricePlotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA78CD282B9F13008FEB8A /* CandlePricePlotHelper.swift */; };
 		C2DBDFA6282A5CFE0086FE09 /* ShortCandleChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBDFA5282A5CFE0086FE09 /* ShortCandleChartView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C21D5C482834CA8E00DBB6A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F560960208443E70078DCFB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F560967208443E70078DCFB;
+			remoteInfo = stockCharts;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4F3ED5FD208582C200C409EB /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +67,8 @@
 		4FF69D1C282D429C0036E4EC /* CandleVolPlotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleVolPlotHelper.swift; sourceTree = "<group>"; };
 		4FF69D1E282D47070036E4EC /* String+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Addition.swift"; sourceTree = "<group>"; };
 		C21D5C3E2833419200DBB6A1 /* ShortCandleCheckLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCandleCheckLineView.swift; sourceTree = "<group>"; };
+		C21D5C442834CA8E00DBB6A1 /* stockChartsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = stockChartsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C21D5C462834CA8E00DBB6A1 /* stockChartsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stockChartsTests.swift; sourceTree = "<group>"; };
 		C283C5F9282934E9000881C5 /* CandleChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleChartViewController.swift; sourceTree = "<group>"; };
 		C283C5FD28293814000881C5 /* CandleData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CandleData.json; sourceTree = "<group>"; };
 		C283C5FE2829385A000881C5 /* CandleDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleDataService.swift; sourceTree = "<group>"; };
@@ -74,6 +87,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C21D5C412834CA8E00DBB6A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +102,7 @@
 			children = (
 				4FB665732090340E00978EE8 /* README.md */,
 				4F56096A208443E70078DCFB /* stockCharts */,
+				C21D5C452834CA8E00DBB6A1 /* stockChartsTests */,
 				4F560969208443E70078DCFB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				4F560968208443E70078DCFB /* stockCharts.app */,
+				C21D5C442834CA8E00DBB6A1 /* stockChartsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,6 +170,14 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		C21D5C452834CA8E00DBB6A1 /* stockChartsTests */ = {
+			isa = PBXGroup;
+			children = (
+				C21D5C462834CA8E00DBB6A1 /* stockChartsTests.swift */,
+			);
+			path = stockChartsTests;
+			sourceTree = "<group>";
+		};
 		C283C5F828293495000881C5 /* CandleChart */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,18 +219,40 @@
 			productReference = 4F560968208443E70078DCFB /* stockCharts.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C21D5C432834CA8E00DBB6A1 /* stockChartsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C21D5C4A2834CA8E00DBB6A1 /* Build configuration list for PBXNativeTarget "stockChartsTests" */;
+			buildPhases = (
+				C21D5C402834CA8E00DBB6A1 /* Sources */,
+				C21D5C412834CA8E00DBB6A1 /* Frameworks */,
+				C21D5C422834CA8E00DBB6A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C21D5C492834CA8E00DBB6A1 /* PBXTargetDependency */,
+			);
+			name = stockChartsTests;
+			productName = stockChartsTests;
+			productReference = C21D5C442834CA8E00DBB6A1 /* stockChartsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		4F560960208443E70078DCFB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = mitake;
 				TargetAttributes = {
 					4F560967208443E70078DCFB = {
 						CreatedOnToolsVersion = 9.3;
+					};
+					C21D5C432834CA8E00DBB6A1 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 4F560967208443E70078DCFB;
 					};
 				};
 			};
@@ -221,6 +273,7 @@
 			projectRoot = "";
 			targets = (
 				4F560967208443E70078DCFB /* stockCharts */,
+				C21D5C432834CA8E00DBB6A1 /* stockChartsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,6 +288,13 @@
 				4F560973208443E80078DCFB /* Assets.xcassets in Resources */,
 				4FB6657B2090390200978EE8 /* polyLineChart.gif in Resources */,
 				C283C60028293FFA000881C5 /* CandleData.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C21D5C422834CA8E00DBB6A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +328,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C21D5C402834CA8E00DBB6A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C21D5C472834CA8E00DBB6A1 /* stockChartsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C21D5C492834CA8E00DBB6A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F560967208443E70078DCFB /* stockCharts */;
+			targetProxy = C21D5C482834CA8E00DBB6A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4F560974208443E80078DCFB /* LaunchScreen.storyboard */ = {
@@ -432,6 +508,59 @@
 			};
 			name = Release;
 		};
+		C21D5C4B2834CA8E00DBB6A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = LeetcodeSolution.stockChartsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stockCharts.app/stockCharts";
+			};
+			name = Debug;
+		};
+		C21D5C4C2834CA8E00DBB6A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = LeetcodeSolution.stockChartsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stockCharts.app/stockCharts";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -449,6 +578,15 @@
 			buildConfigurations = (
 				4F56097B208443E80078DCFB /* Debug */,
 				4F56097C208443E80078DCFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C21D5C4A2834CA8E00DBB6A1 /* Build configuration list for PBXNativeTarget "stockChartsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C21D5C4B2834CA8E00DBB6A1 /* Debug */,
+				C21D5C4C2834CA8E00DBB6A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

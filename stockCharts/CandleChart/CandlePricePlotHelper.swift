@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-private struct CandlePosition {
+struct CandlePosition {
     var high: CGPoint = .zero
     var low: CGPoint = .zero
     var rect: CGRect = .zero
@@ -28,7 +28,7 @@ class CandlePricePlotHelper: CandleUnitPlotHelper {
     }
     
     // k線
-    private var positions:[CandlePosition] = []
+    var positions:[CandlePosition] = []
     private var priceUnit: CGFloat = 0.1
     private var store: CandlePlotStore
     
