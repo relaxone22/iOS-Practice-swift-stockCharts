@@ -21,7 +21,6 @@
 		4F95E3E82091604500314391 /* SlipPolyLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F95E3E72091604500314391 /* SlipPolyLineView.swift */; };
 		4FACBC96208998C10050DB58 /* PolyLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FACBC95208998C10050DB58 /* PolyLineViewController.swift */; };
 		4FB665742090340E00978EE8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4FB665732090340E00978EE8 /* README.md */; };
-		4FB6657B2090390200978EE8 /* polyLineChart.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4FB6657A2090390200978EE8 /* polyLineChart.gif */; };
 		4FF69D1D282D429C0036E4EC /* CandleVolPlotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF69D1C282D429C0036E4EC /* CandleVolPlotHelper.swift */; };
 		4FF69D1F282D47070036E4EC /* String+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF69D1E282D47070036E4EC /* String+Addition.swift */; };
 		C21D5C3F2833419200DBB6A1 /* ShortCandleCheckLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21D5C3E2833419200DBB6A1 /* ShortCandleCheckLineView.swift */; };
@@ -71,7 +70,6 @@
 		4F95E3E72091604500314391 /* SlipPolyLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipPolyLineView.swift; sourceTree = "<group>"; };
 		4FACBC95208998C10050DB58 /* PolyLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolyLineViewController.swift; sourceTree = "<group>"; };
 		4FB665732090340E00978EE8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		4FB6657A2090390200978EE8 /* polyLineChart.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = polyLineChart.gif; sourceTree = "<group>"; };
 		4FF69D1C282D429C0036E4EC /* CandleVolPlotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleVolPlotHelper.swift; sourceTree = "<group>"; };
 		4FF69D1E282D47070036E4EC /* String+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Addition.swift"; sourceTree = "<group>"; };
 		C21D5C3E2833419200DBB6A1 /* ShortCandleCheckLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCandleCheckLineView.swift; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 		4FB665792090390100978EE8 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				4FB6657A2090390200978EE8 /* polyLineChart.gif */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -336,7 +333,6 @@
 				4FB665742090340E00978EE8 /* README.md in Resources */,
 				4F560976208443E80078DCFB /* LaunchScreen.storyboard in Resources */,
 				4F560973208443E80078DCFB /* Assets.xcassets in Resources */,
-				4FB6657B2090390200978EE8 /* polyLineChart.gif in Resources */,
 				C283C60028293FFA000881C5 /* CandleData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
